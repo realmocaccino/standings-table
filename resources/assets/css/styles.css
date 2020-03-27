@@ -1,0 +1,70 @@
+h1, h2, h3, h4, h5, h6 {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#logo {
+    float: left;
+    margin: 10px 10px 0;
+    width: 85px;
+    height: 85px;
+}
+
+.container-fluid {
+    background-color: #FFF;
+}
+
+.caption {
+    color: #6c757d;
+    text-align: right;
+    font-size: 12px;
+}
+
+.group th,
+.group td {
+    text-align: center;
+}
+
+.playerName {
+    cursor: default;
+}
+
+.position-1,
+.position-3 {
+    background-color: #80B197;
+}
+
+.position-2,
+.position-4 {
+    background-color: #9CC3AE;
+}
+
+.position-5,
+.position-7 {
+    background-color: #D9D6D5;
+}
+
+.position-6 {
+    background-color: #BAB2B2;
+}
+
+.position-8 {
+    background-color: #B57676;
+}
+
+.position-9 {
+    background-color: #CBA09F;
+}
+
+.results-hr {
+    margin-top: 0;
+}
+
+#results {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+#result-search-input {
+    margin-bottom: 15px;
+}

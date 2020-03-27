@@ -86,4 +86,4 @@ uasort($players, function($a, $b) use($results, $regex) {
     return ($a['sw'] < $b['sw']) ? 1 : -1;
 });
 
-include('resources/views/index.php');
+include(__DIR__ . '/view/index.php');

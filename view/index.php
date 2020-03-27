@@ -4,14 +4,14 @@
         <title><?php echo $settings['name']; ?> Standings - TnT Championship 2020.1</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <link rel="stylesheet" href="resources/assets/css/styles.css">
-        <script src="resources/assets/js/scripts.js"></script>
+        <link rel="stylesheet" href="public/css/styles.css">
+        <script src="public/js/scripts.js"></script>
     </head>
     <body>
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12">
-                    <img id="logo" src="resources/assets/img/logo.jpg">
+                    <img id="logo" src="public/img/logo.jpg">
                     <h3>Tooth and Tail Championship 2020.1</h3>
                     <em><?php echo $settings['name']; ?></em>
                 </div>
@@ -98,7 +98,7 @@
                                                 }
                                             ?>
                                         </td>
-                                        <td width="15%"><a href="scripts/delete_result.php?result_id=<?php echo $result['id']; ?>" class="text-danger">delete</a></td>
+                                        <td width="15%"><a href="delete_result.php?result_id=<?php echo $result['id']; ?>" class="text-danger">delete</a></td>
                                     </tr>
                                     <?php endif; ?>
                                     <?php endforeach; ?>
@@ -113,7 +113,7 @@
                                 <label for="result-insert-input">Insert a result</label>
                             </h5>
                             <hr class="results-hr">
-                            <form method="post" action="scripts/insert_result.php">
+                            <form method="post" action="insert_result.php">
                                 <div class="input-group">
                                    <input type="text" id="result-insert-input" class="form-control" name="result" placeholder="Ex: dzon 3-1 mocaccino" pattern="(.*) [0-3]-[0-3] (.*)" <?php if(isset($_GET['result'])) { ?> value="<?php echo $_GET['result']; ?>" <?php } ?> required>
                                    <span class="input-group-btn">

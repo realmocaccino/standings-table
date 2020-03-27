@@ -1,7 +1,7 @@
 <?php
-require(__DIR__ . '/../inc/database.php');
+require(__DIR__ . '/inc/database.php');
 
-$players = require(__DIR__ . '/../config/players.php');
+$players = require(__DIR__ . '/config/players.php');
 $playerNames = array_column($players, 'name');
 
 if(isset($_POST['result']) and $_POST['result']) {
@@ -58,4 +58,4 @@ if(isset($_POST['result']) and $_POST['result']) {
     }
 }
 
-header('Location: ..' . ($errorMessage ? '/?message=' . $errorMessage . '&result=' . $result : null));
+header('Location: .' . ($errorMessage ? '/?message=' . $errorMessage . '&result=' . $result : null));

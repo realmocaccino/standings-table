@@ -92,13 +92,15 @@
                                                     
                                                     if($score1 > $score2) {
                                                         echo preg_replace("/(.*) (\d)-(\d) (.*)/", "<strong>$1 $2</strong>-$3 $4", $result['result']);
-                                                    } else {
+                                                    } elseif($score2 > $score1) {
                                                         echo preg_replace("/(.*) (\d)-(\d) (.*)/", "$1 $2-<strong>$3 $4</strong>", $result['result']);
+                                                    } else {
+                                                        echo $result['result'];
                                                     }
                                                 }
                                             ?>
                                         </td>
-                                        <td width="15%"><a href="delete_result.php?result_id=<?php echo $result['id']; ?>" class="text-danger">delete</a></td>
+                                        <td width="15%"><a href="action/delete_result.php?result_id=<?php echo $result['id']; ?>" class="text-danger">delete</a></td>
                                     </tr>
                                     <?php endif; ?>
                                     <?php endforeach; ?>
@@ -113,7 +115,7 @@
                                 <label for="result-insert-input">Insert a result</label>
                             </h5>
                             <hr class="results-hr">
-                            <form method="post" action="insert_result.php">
+                            <form method="post" action="action/insert_result.php">
                                 <div class="input-group">
                                    <input type="text" id="result-insert-input" class="form-control" name="result" placeholder="Ex: dzon 3-1 mocaccino" pattern="(.*) [0-3]-[0-3] (.*)" <?php if(isset($_GET['result'])) { ?> value="<?php echo $_GET['result']; ?>" <?php } ?> required>
                                    <span class="input-group-btn">

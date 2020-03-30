@@ -1,7 +1,7 @@
 <?php
-require(__DIR__ . '/../inc/database.php');
+require(__DIR__ . '/../includes/database.php');
 
-$players = require(__DIR__ . '/../config/players.php');
+$players = require(__DIR__ . '/../configs/players.php');
 $playerNames = array_column($players, 'name');
 
 if(isset($_POST['result']) and $_POST['result']) {

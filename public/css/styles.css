@@ -15,9 +15,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .caption {
-    color: #6c757d;
+    color: #5c757d;
     text-align: right;
     font-size: 12px;
+    font-weight: bold;
 }
 
 .group th,

@@ -13,7 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
             tr.style.display = [...tr.children].find(td => td.innerHTML.toUpperCase().includes(ev.target.value.toUpperCase())) ? '' : 'none'
         })
     })
-    
+
     input.addEventListener('keyup', ev => {
         backspaceKeyCode = 8
         

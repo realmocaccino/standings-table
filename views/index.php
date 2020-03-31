@@ -1,7 +1,7 @@
 <!doctype html>
 <html>
     <head>
-        <title><?php echo $settings['name']; ?> Standings - TnT Championship 2020.1</title>
+        <title><?php echo $settings['tournament_secondary_name']; ?> Standings - <?php echo $settings['tournament_primary_name']; ?></title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <link rel="stylesheet" href="public/css/styles.css">
@@ -12,8 +12,8 @@
             <div class="row">
                 <div class="col-12">
                     <img id="logo" src="public/img/logo.jpg">
-                    <h3>Tooth and Tail Championship 2020.1</h3>
-                    <em><?php echo $settings['name']; ?></em>
+                    <h3><?php echo $settings['tournament_primary_name']; ?></h3>
+                    <em><?php echo $settings['tournament_secondary_name']; ?></em>
                 </div>
             </div>
             <div class="row">
@@ -91,11 +91,11 @@
                                                     list($score1, $score2) = explode('-', $matches[2]);
                                                     
                                                     if($score1 > $score2) {
-                                                        echo preg_replace("/(.*) (\d)-(\d) (.*)/", "<strong>$1 $2</strong>-$3 $4", $result['result']);
+                                                        echo preg_replace("/(.*) (\d)-(\d) (.*)/", "<strong><span class='playerName'>$1</span> $2</strong>-$3 <span class='playerName'>$4</span>", $result['result']);
                                                     } elseif($score2 > $score1) {
-                                                        echo preg_replace("/(.*) (\d)-(\d) (.*)/", "$1 $2-<strong>$3 $4</strong>", $result['result']);
+                                                        echo preg_replace("/(.*) (\d)-(\d) (.*)/", "<span class='playerName'>$1</span> $2-<strong>$3 <span class='playerName'>$4</span></strong>", $result['result']);
                                                     } else {
-                                                        echo $result['result'];
+                                                        echo preg_replace("/(.*) (\d)-(\d) (.*)/", "<span class='playerName'>$1</span> $2-$3 <span class='playerName'>$4</span>", $result['result']);
                                                     }
                                                 }
                                             ?>
@@ -122,9 +122,9 @@
                                         <input type="submit" class="btn btn-primary float-right" value="Send">
                                    </span>
                                 </div>
-                                <?php if(isset($_GET['message'])) { ?>
+                                <?php if(isset($_GET['message'])): ?>
                                     <div class="invalid-feedback d-block"><?php echo $_GET['message']; ?></div>
-                               <?php } ?>
+                                <?php endif; ?>
                             </form>
                         </div>
                     </div>

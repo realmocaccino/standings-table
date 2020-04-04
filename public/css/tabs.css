@@ -1,0 +1,28 @@
+input { display: none; }
+
+input + label { display: inline-block }
+
+input ~ .tab { display: none }
+
+#tab1:checked ~ .tab.content1,
+#tab2:checked ~ .tab.content2 { display: flex }
+
+input + label {
+  border: 1px solid #dee2e6;
+  background: #FFF;
+  padding: 4px 12px;
+  border-radius: 4px 4px 0 0;
+  position: relative;
+  top: 1px;
+  cursor: pointer;
+  margin: 20px 0 0;
+}
+
+input:checked + label, input:hover + label {
+  background: #CCC;
+  border-bottom: 1px solid transparent;
+}
+
+input ~ .tab {
+  border-top: 1px solid #dee2e6;
+}

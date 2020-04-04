@@ -16,5 +16,4 @@ $regex = "/(.*) (\d-\d) (.*)/";
 
 include(__DIR__ . '/includes/process_results.php');
 include(__DIR__ . '/includes/sort_players.php');
-include(__DIR__ . '/includes/define_brackets.php');
 include(__DIR__ . '/views/index.php');

@@ -57,7 +57,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .position-9 {
-    background-color: #444;
+    background-color: #666;
 }
 
 .results-hr {
@@ -65,8 +65,12 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #results {
-    height: 400px;
+    height: 380px;
     overflow-y: scroll;
+}
+
+#results.results-long {
+    height: 500px;
 }
 
 #result-search-input {

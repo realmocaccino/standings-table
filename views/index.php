@@ -79,7 +79,7 @@
                             </div>
                             <div class="row">
                                 <div class="col-12">
-                                    <div id="results">
+                                    <div id="results" <?php if(!$isAdmin) { ?> class="results-long" <?php } ?>>
                                         <div class="input-group">
                                            <input type="text" id="result-search-input" class="form-control" placeholder="Search for result(s)">
                                         </div>
@@ -105,7 +105,11 @@
                                                         }
                                                     ?>
                                                 </td>
-                                                <td width="15%"><a href="actions/delete_result.php?result_id=<?php echo $result['id']; ?>" class="text-danger">delete</a></td>
+                                                <td width="15%">
+                                                    <?php if($isAdmin) { ?>
+                                                        <a href="actions/delete_result.php?result_id=<?php echo $result['id']; ?>" class="text-danger">delete</a>
+                                                    <?php } ?>
+                                                </td>
                                             </tr>
                                             <?php endif; ?>
                                             <?php endforeach; ?>
@@ -116,21 +120,23 @@
                                             <?php endif; ?>
                                         </table>
                                     </div>
-                                    <h5>
-                                        <label for="result-insert-input">Insert a result</label>
-                                    </h5>
-                                    <hr class="results-hr">
-                                    <form method="post" action="actions/insert_result.php">
-                                        <div class="input-group">
-                                           <input type="text" id="result-insert-input" class="form-control" name="result" placeholder="Ex: dzon 3-1 mocaccino" pattern="(.*) [0-3]-[0-3] (.*)" <?php if(isset($_GET['result'])) { ?> value="<?php echo $_GET['result']; ?>" <?php } ?> required>
-                                           <span class="input-group-btn">
-                                                <input type="submit" class="btn btn-primary float-right" value="Send">
-                                           </span>
-                                        </div>
-                                        <?php if(isset($_GET['message'])): ?>
-                                            <div class="invalid-feedback d-block"><?php echo $_GET['message']; ?></div>
-                                        <?php endif; ?>
-                                    </form>
+                                    <?php if($isAdmin) { ?>
+                                        <h5>
+                                            <label for="result-insert-input">Insert a result</label>
+                                        </h5>
+                                        <hr class="results-hr">
+                                        <form method="post" action="actions/insert_result.php">
+                                            <div class="input-group">
+                                               <input type="text" id="result-insert-input" class="form-control" name="result" placeholder="Ex: dzon 3-1 mocaccino" pattern="(.*) [0-3]-[0-3] (.*)" <?php if(isset($_GET['result'])) { ?> value="<?php echo $_GET['result']; ?>" <?php } ?> required>
+                                               <span class="input-group-btn">
+                                                    <input type="submit" class="btn btn-primary float-right" value="Send">
+                                               </span>
+                                            </div>
+                                            <?php if(isset($_GET['message'])): ?>
+                                                <div class="invalid-feedback d-block"><?php echo $_GET['message']; ?></div>
+                                            <?php endif; ?>
+                                        </form>
+                                    <?php } ?>
                                 </div>
                             </div>
                         </div>

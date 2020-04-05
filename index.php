@@ -14,6 +14,8 @@ $quarterFinalists = [];
 
 $regex = "/(.*) (\d-\d) (.*)/";
 
+$isAdmin = (bool) isset($_GET['admin']) and $_GET['admin'];
+
 include(__DIR__ . '/includes/process_results.php');
 include(__DIR__ . '/includes/sort_players.php');
 include(__DIR__ . '/views/index.php');

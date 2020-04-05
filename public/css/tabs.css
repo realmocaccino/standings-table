@@ -5,7 +5,8 @@ input + label { display: inline-block }
 input ~ .tab { display: none }
 
 #tab1:checked ~ .tab.content1,
-#tab2:checked ~ .tab.content2 { display: flex }
+#tab2:checked ~ .tab.content2,
+#tab3:checked ~ .tab.content3 { display: flex }
 
 input + label {
   border: 1px solid #dee2e6;
@@ -19,7 +20,7 @@ input + label {
 }
 
 input:checked + label, input:hover + label {
-  background: #CCC;
+  background: #BBB;
   border-bottom: 1px solid transparent;
 }
 

@@ -22,7 +22,9 @@
                     <input type="radio" name="tabs" id="tab1" checked>
                     <label for="tab1">Groups stage</label>
                     <input type="radio" name="tabs" id="tab2">
-                    <label for="tab2">Brackets</label>
+                    <label for="tab2">Quarter-finals</label>
+                    <input type="radio" name="tabs" id="tab3">
+                    <label for="tab3">Relegation</label>
                     <div class="row tab content1">
                         <div class="col-lg-8 col-12">
                             <div class="row">
@@ -141,6 +143,15 @@
                                 <li class="list-group-item"><span class="badge badge-primary badge-pill">QF2</span> <?php echo $quarterFinalists['2B'] . ' <strong>vs</strong> ' . $quarterFinalists['3A']; ?></li>
                                 <li class="list-group-item"><span class="badge badge-primary badge-pill">QF3</span> <?php echo $quarterFinalists['1B'] . ' <strong>vs</strong> ' . $quarterFinalists['4A']; ?></li>
                                 <li class="list-group-item"><span class="badge badge-primary badge-pill">QF4</span> <?php echo $quarterFinalists['2A'] . ' <strong>vs</strong> ' . $quarterFinalists['3B']; ?></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row tab content3">
+                        <div class="col-12">
+                            <h2>Relegation</h2>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item"><span class="badge badge-primary badge-pill">R1</span> <?php echo $quarterFinalists['7A'] . ' <strong>vs</strong> ' . $quarterFinalists['8B']; ?></li>
+                                <li class="list-group-item"><span class="badge badge-primary badge-pill">R2</span> <?php echo $quarterFinalists['7B'] . ' <strong>vs</strong> ' . $quarterFinalists['8A']; ?></li>
                             </ul>
                         </div>
                     </div>

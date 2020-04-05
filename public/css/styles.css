@@ -40,8 +40,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #9CC3AE;
 }
 
-.position-5,
-.position-7 {
+.position-5 {
     background-color: #D9D6D5;
 }
 
@@ -49,12 +48,16 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #BAB2B2;
 }
 
+.position-7 {
+    background-color: #CBA09F;
+}
+
 .position-8 {
     background-color: #B57676;
 }
 
 .position-9 {
-    background-color: #CBA09F;
+    background-color: #444;
 }
 
 .results-hr {
